@@ -1,0 +1,21 @@
+<html>
+    <head>
+        <title>
+            {{ title }} - Car Orders
+        </title>
+    </head>
+    <body>
+        <h1>
+            Car Orders
+        </h1>
+        {% for order in orders %}
+        <div>
+            <ul>
+                <li>{{ order.name }}</li>
+                <li> Date ordered: {{ order.order_date }}</li>
+                <li>Amount ordered: {{ order.quantity }}</li>
+            </ul>
+        </div>
+        {% endfor %}
+    </body>
+</html>
