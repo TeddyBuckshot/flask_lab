@@ -8,14 +8,16 @@
         <h1>
             Car Orders
         </h1>
-        {% for order in orders %}
+        {% for order in group_of_orders %}
         <div>
             <ul>
-                <li>{{ order.name }}</li>
+                <li>Manufacturer: {{ order.name }}</li>
                 <li> Date ordered: {{ order.order_date }}</li>
                 <li>Amount ordered: {{ order.quantity }}</li>
+                <a href="/car_order/{{ group_of_orders.index(order) }}"  >More information here:</a>
             </ul>
         </div>
         {% endfor %}
+        
     </body>
 </html>
